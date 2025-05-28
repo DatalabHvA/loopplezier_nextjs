@@ -89,17 +89,32 @@ const MapDisplay = () => {
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
       {!memoizedMapData && memoizedRoadsData && (
-        <GeoJSON data={memoizedRoadsData} style={roadStyle} />
+        <GeoJSON
+          key={`roadsData-${JSON.stringify(memoizedRoadsData).length}`}
+          data={memoizedRoadsData}
+          style={roadStyle}
+        />
       )}
 
-      {memoizedMapData && <GeoJSON data={memoizedMapData} style={roadStyle} />}
+      {memoizedMapData && (
+        <GeoJSON
+          key={`mapData-${JSON.stringify(memoizedMapData).length}`}
+          data={memoizedMapData}
+          style={roadStyle}
+        />
+      )}
 
       {memoizedRouteData && (
-        <GeoJSON data={memoizedRouteData} style={routeStyle} />
+        <GeoJSON
+          key={`routeData-${JSON.stringify(memoizedRouteData).length}`}
+          data={memoizedRouteData}
+          style={routeStyle}
+        />
       )}
 
       {renderNodes && memoizedNodesData && (
         <GeoJSON
+          key={`nodesData-${JSON.stringify(memoizedNodesData).length}`}
           data={memoizedNodesData}
           pointToLayer={pointToLayer}
           onEachFeature={onEachNodeFeature}
