@@ -113,7 +113,7 @@ export default function DefaultScoreForm() {
     >
       {/* Always visible header */}
       <div
-        className={`cursor-pointer px-4 flex items-center justify-between sm:cursor-default text-sm text-gray-600 transition-all duration-500 ${
+        className={`cursor-pointer px-4 flex items-center justify-between sm:cursor-default text-sm text-gray-500 transition-all duration-500 ${
           isOpen
             ? "opacity-0 scale-95 h-0 overflow-hidden"
             : "opacity-100 scale-100 h-12"
@@ -121,7 +121,12 @@ export default function DefaultScoreForm() {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex items-center gap-2">
-          <span className="text-lg">🚶‍♂️</span>
+          {/* <span className="text-lg">🚶‍♂️</span> */}
+          <img
+            src="/place-gray.svg"
+            alt="Route icon"
+            className="w-5 h-5 opacity-90"
+          />
           <span>Genereer een route</span>
         </div>
       </div>
