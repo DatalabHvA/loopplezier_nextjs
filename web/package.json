@@ -4,9 +4,9 @@
   "private": true,
   "proxy": "http://localhost:5000/",
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "next dev -p 443",
     "build": "next build",
-    "start": "next start -p 3001",
+    "start": "next start -p 443",
     "lint": "next lint"
   },
   "dependencies": {

@@ -10,6 +10,6 @@ class Settings(BaseSettings):
 
     @property
     def port(self):
-        return int(os.getenv('PROD_PORT', 80)) if self.environment == 'production' else int(os.getenv('DEV_PORT', 8000))
+        return int(os.getenv('PROD_PORT', 8081)) if self.environment == 'production' else int(os.getenv('DEV_PORT', 8080))
 
 settings = Settings()
