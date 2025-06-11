@@ -5,9 +5,9 @@ import { Scores } from "@/types/types";
 
 const ROUTE_TYPES = {
   water_and_roads: {
-    label: "Water & Minder Drukke Wegen",
+    label: "Wandelen langs het water",
     description:
-      "Een rustige route langs het water en weg van druk verkeer. Ideaal voor ontspanning.",
+      "Een mooie route langs grachten en rivieren. Ideaal voor ontspanning.",
     scores: {
       "Score openbare verlichting": 0,
       "Score bomen": 0,
@@ -18,9 +18,9 @@ const ROUTE_TYPES = {
     },
   },
   monuments: {
-    label: "Monumentale gebouwen",
+    label: "Sightseeing Amsterdam",
     description:
-      "Een culturele route door groene gebieden met historische monumenten.",
+      "Een culturele route door gebieden met historische monumenten.",
     scores: {
       "Score openbare verlichting": 0,
       "Score bomen": 0,
@@ -31,9 +31,9 @@ const ROUTE_TYPES = {
     },
   },
   trees_and_parks: {
-    label: "Bomen & parken",
+    label: "Groene route",
     description:
-      "Een culturele route door groene gebieden met historische monumenten.",
+      "Een mooie groene route langs bomen en parken",
     scores: {
       "Score openbare verlichting": 0,
       "Score bomen": 1,
@@ -49,7 +49,6 @@ const DISTANCE_OPTIONS = [
   { label: "1km", value: 1000 },
   { label: "2km", value: 2000 },
   { label: "5km", value: 5000 },
-  { label: "10km", value: 10000 },
 ];
 
 export default function DefaultScoreForm() {
