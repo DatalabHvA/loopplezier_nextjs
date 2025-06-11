@@ -48,6 +48,7 @@ const ROUTE_TYPES = {
 const DISTANCE_OPTIONS = [
   { label: "1km", value: 1000 },
   { label: "2km", value: 2000 },
+  { label: "3km", value: 3000 },
   { label: "5km", value: 5000 },
 ];
 
@@ -59,7 +60,7 @@ export default function DefaultScoreForm() {
 
   const [routeType, setRouteType] =
     useState<keyof typeof ROUTE_TYPES>("water_and_roads");
-  const [distance, setDistance] = useState<number>(2000);
+  const [distance, setDistance] = useState<number>(3000);
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [distanceDropdownOpen, setDistanceDropdownOpen] = useState(false);
