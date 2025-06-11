@@ -9,31 +9,43 @@ const ROUTE_TYPES = {
     description:
       "Een rustige route langs het water en weg van druk verkeer. Ideaal voor ontspanning.",
     scores: {
-      "Score openbare verlichting": 2,
-      "Score bomen": 1,
-      "Score water": 5,
+      "Score openbare verlichting": 0,
+      "Score bomen": 0,
+      "Score water": 1,
       "Score monumenten": 0,
-      "Score drukke wegen": -10,
-      "Score parken": 2,
+      "Score drukke wegen": -1,
+      "Score parken": 0,
     },
   },
   monuments_and_trees: {
-    label: "Monumenten & Bomen",
+    label: "Monumentale gebouwen",
     description:
       "Een culturele route door groene gebieden met historische monumenten.",
     scores: {
-      "Score openbare verlichting": 2,
-      "Score bomen": 5,
-      "Score water": 1,
-      "Score monumenten": 5,
-      "Score drukke wegen": -3,
-      "Score parken": 3,
+      "Score openbare verlichting": 0,
+      "Score bomen": 0,
+      "Score water": 0,
+      "Score monumenten": 1,
+      "Score drukke wegen": -1,
+      "Score parken": 0,
+    },
+  },
+  monuments_and_trees: {
+    label: "Bomen & parken",
+    description:
+      "Een culturele route door groene gebieden met historische monumenten.",
+    scores: {
+      "Score openbare verlichting": 0,
+      "Score bomen": 1,
+      "Score water": 0,
+      "Score monumenten": 0,
+      "Score drukke wegen": -1,
+      "Score parken": 1,
     },
   },
 };
 
 const DISTANCE_OPTIONS = [
-  { label: "500m", value: 500 },
   { label: "1km", value: 1000 },
   { label: "2km", value: 2000 },
   { label: "5km", value: 5000 },
@@ -48,7 +60,7 @@ export default function DefaultScoreForm() {
 
   const [routeType, setRouteType] =
     useState<keyof typeof ROUTE_TYPES>("water_and_roads");
-  const [distance, setDistance] = useState<number>(500);
+  const [distance, setDistance] = useState<number>(2000);
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [distanceDropdownOpen, setDistanceDropdownOpen] = useState(false);
@@ -65,7 +77,7 @@ export default function DefaultScoreForm() {
       "Start knooppunt": START_KNOOPPUNT,
       "Eind knooppunt": EIND_KNOOPPUNT,
       "Minimale afstand": distance,
-      "Maximale afstand": distance,
+      "Maximale afstand": distance+500,
       ...selected.scores,
     };
 
