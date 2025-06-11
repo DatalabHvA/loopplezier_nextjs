@@ -11,7 +11,7 @@ const ROUTE_TYPES = {
     scores: {
       "Score openbare verlichting": 0,
       "Score bomen": 0,
-      "Score water": 1,
+      "Score water": 3,
       "Score monumenten": 0,
       "Score drukke wegen": -1,
       "Score parken": 0,
@@ -25,7 +25,7 @@ const ROUTE_TYPES = {
       "Score openbare verlichting": 0,
       "Score bomen": 0,
       "Score water": 0,
-      "Score monumenten": 1,
+      "Score monumenten": 3,
       "Score drukke wegen": -1,
       "Score parken": 0,
     },
@@ -40,7 +40,7 @@ const ROUTE_TYPES = {
       "Score water": 0,
       "Score monumenten": 0,
       "Score drukke wegen": -1,
-      "Score parken": 1,
+      "Score parken": 3,
     },
   },
 };
