@@ -17,7 +17,7 @@ const ROUTE_TYPES = {
       "Score parken": 0,
     },
   },
-  monuments_and_trees: {
+  monuments: {
     label: "Monumentale gebouwen",
     description:
       "Een culturele route door groene gebieden met historische monumenten.",
@@ -30,7 +30,7 @@ const ROUTE_TYPES = {
       "Score parken": 0,
     },
   },
-  monuments_and_trees: {
+  trees_and_parks: {
     label: "Bomen & parken",
     description:
       "Een culturele route door groene gebieden met historische monumenten.",
