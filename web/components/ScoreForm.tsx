@@ -55,8 +55,6 @@ function ScoreForm() {
 
     const responseData = await response.json();
 
-    console.log(responseData);
-
     setMapData(responseData);
   };
 

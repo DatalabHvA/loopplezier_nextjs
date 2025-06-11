@@ -9,6 +9,7 @@ import chroma from "chroma-js";
 import { useMapData } from "@/context/MapDataContext";
 import { useRouteData } from "@/context/RouteDataContext";
 import { NodesData, RoadsData } from "@/types/types";
+import { WMSTileLayer } from "react-leaflet";
 import L from "leaflet";
 
 const fetchGeoJSON = async (endpoint: string) => {
@@ -18,7 +19,9 @@ const fetchGeoJSON = async (endpoint: string) => {
 };
 
 const getColorForScore = (score: number): string => {
-  const colormap = chroma.scale("RdYlGn").domain([-1, 1]);
+  const colormap = chroma
+    .scale(["#A9413866", "#FFF8D466", "#198F5366"]) // light blue to deep blue
+    .domain([-1, 0, 1]); // adjust if score range is known
   return colormap(score).hex();
 };
 
@@ -35,8 +38,8 @@ const MapDisplay = () => {
         const nodes = await fetchGeoJSON("nodes");
         const roads = await fetchGeoJSON("roads");
 
-        setRoadsData(roads);
-        setNodesData(nodes);
+        // setRoadsData(roads);
+        // setNodesData(nodes);
         setRenderNodes(true);
       } catch (error) {
         console.error("Error fetching geoJSON data:", error);
@@ -87,6 +90,8 @@ const MapDisplay = () => {
       preferCanvas={true}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      {/* <TileLayer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" /> */}
+      {/* <TileLayer url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png" /> */}
 
       {!memoizedMapData && memoizedRoadsData && (
         <GeoJSON
