@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  basePath: "/loopplezier",
+};
 
-export default nextConfig;
+module.exports = nextConfig;
