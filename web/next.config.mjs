@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  basePath: "/loopplezier-new",
+  assetPrefix: "/loopplezier-new",
+};
 
 export default nextConfig;

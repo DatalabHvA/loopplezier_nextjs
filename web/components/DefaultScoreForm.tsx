@@ -32,8 +32,7 @@ const ROUTE_TYPES = {
   },
   trees_and_parks: {
     label: "Groene route",
-    description:
-      "Een mooie groene route langs bomen en parken",
+    description: "Een mooie groene route langs bomen en parken",
     scores: {
       "Score openbare verlichting": 0,
       "Score bomen": 1,
@@ -77,7 +76,7 @@ export default function DefaultScoreForm() {
       "Start knooppunt": START_KNOOPPUNT,
       "Eind knooppunt": EIND_KNOOPPUNT,
       "Minimale afstand": distance,
-      "Maximale afstand": distance+500,
+      "Maximale afstand": distance + 500,
       ...selected.scores,
     };
 
@@ -135,7 +134,7 @@ export default function DefaultScoreForm() {
         <div className="flex items-center gap-2">
           {/* <span className="text-lg">🚶‍♂️</span> */}
           <img
-            src="/place-gray.svg"
+            src="/loopplezier-new/place-gray.svg"
             alt="Route icon"
             className="w-5 h-5 opacity-90"
           />
