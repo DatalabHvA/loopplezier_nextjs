@@ -3,4 +3,4 @@ const nextConfig = {
   basePath: "/loopplezier",
 };
 
-module.exports = nextConfig;
+export default nextConfig;
